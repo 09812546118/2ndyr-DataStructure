@@ -1,0 +1,41 @@
+Order of Precedence 
+- - - - - - - - - -
+
+1. *, /
+
+2. +, -
+
+1 + 2 (infix) - design for human
+	
+1 2 + (postfix) - design for computer
+
+1 - 2 * 3 + 4 / 5
+     
+      infix
+
+1 2 3 * - 4 5 / +
+      postfix
+
+NOTE: operand are directly put to the postfix string
+
+before you put the other operators check if the stack is empty or not 
+if its not compare the first operator on the stack and then if the new operator you will put is higher precedence and then put that inside the stack. compare the third operator if you see that the next operator is lower than to the operator that inside in the stack you need to pop the higher operator and put it in the postfix string. and then if you see the next operator is equal to the next operator you need to pop out the operator inside the stack and then put it in the postfix string. in the process of prove if correct the first you put in the stack is operand and then before you put the operator inside the stack you need to pop 2 operand the 3 is the multiplier and the 2 multiplicand after getting the result of 2 * 3 = 6 you need to put that in stack and then before you put the operator in the stack you need to pop the 2 operand the subtrahend 6 and the 1 minuend. the same thing in the process of proving you need to pop 2 operand inside the stack the 5 is divisor and 4 is dividend and then the result is 0.8 that need to put back inside the stack furthermore the same thing in prove if correct you need to pop 2 operand inside the stack the 0.8 addend and the -5 augend and then if you will get the result of - 4.2 and put inside the stack
+
+
+postfix string = 1 2 3 * -  4 5 / + 
+
+
+prove if correct
+
+       +
+
+
+STACK = - 4.2
+
+2 * 3 = 6
+
+1 - 6 = -5
+
+5 / 4 = 0.8
+
+-5 + 0.8 = - 4.2
